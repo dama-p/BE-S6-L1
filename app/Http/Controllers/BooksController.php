@@ -6,21 +6,21 @@ use Illuminate\Http\Request;
 
 class BooksController extends Controller
 {
-    public function getBooks()
+    public function index()
     {
         return view('booklist');
     }
-    public function getDetails($id)
+    public function show($id)
     {
         return view('details');
     }
 
-    public function addBook()
+    public function create()
     {
         return view('add');
     }
 
-    public function editBook($id)
+    public function edit($id)
     {
         return view('edit');
     }

@@ -8,10 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/books', [BooksController::class,'getBooks'])->name('getBooks');
+Route::get('/books', [BooksController::class,'index'])->name('index');
 
-Route::get('/books/{id}', [BooksController::class,'getDetails'])->name('getDetails');
+Route::get('/books/{id}', [BooksController::class,'show'])->name('show');
 
-Route::get('/add', [BooksController::class,'addBook'])->name('addBook');
+Route::get('books/add', [BooksController::class,'create'])->name('create');
 
-Route::get('{id}/edit', [BooksController::class,'editBook'])->name('editBook'); 
+Route::get('books/{id}/edit', [BooksController::class,'edit'])->name('edit'); 
