@@ -14,4 +14,4 @@ Route::get('/books/{id}', [BooksController::class,'getDetails'])->name('getDetai
 
 Route::get('/add', [BooksController::class,'addBook'])->name('addBook');
 
-Route::get('/edit', [BooksController::class,'editBook'])->name('editBook'); 
+Route::get('{id}/edit', [BooksController::class,'editBook'])->name('editBook'); 

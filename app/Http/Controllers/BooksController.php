@@ -20,7 +20,7 @@ class BooksController extends Controller
         return view('add');
     }
 
-    public function editBook()
+    public function editBook($id)
     {
         return view('edit');
     }
